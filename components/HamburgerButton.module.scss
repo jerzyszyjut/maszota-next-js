@@ -1,27 +1,29 @@
 .hamburgerIcon {
-    width: 2rem;
-    height: 0.1rem;
     position: relative;
-    
     background-color: #000;
+
+    &,
+    &::before,
+    &::after {
+        width: 3rem;
+        height: 4px;
+        transition: all 0.3s ease;
+        background-color: #000;
+    }
 
     &::before,
     &::after {
         content: '';
         position: absolute;
-        width: 2rem;
-        height: 0.1rem;
-        background-color: #000;
-        transition: all 0.3s ease;
         left: 0;
     }
 
     &::before {
-        top: -0.5rem;
+        top: -0.8rem;
     }
 
     &::after {
-        top: 0.5rem;
+        top: 0.8rem;
     }
 
     &.active {

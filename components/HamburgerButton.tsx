@@ -8,8 +8,9 @@ interface Props {
 const HamburgerButton = ({ onClick, isActivated }: Props) => {
     return (
         <button
-            className='w-8 h-8 flex justify-center items-center lg:hidden'
+            className='w-12 h-12 flex justify-center items-center lg:hidden'
             type="button"
+            aria-label={!isActivated ? 'Open menu' : 'Close menu'}
             onClick={onClick}
         >
             <span className={`${style.hamburgerIcon} ${isActivated ? style.active : ''}`}></span>
