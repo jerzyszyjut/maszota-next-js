@@ -1,5 +1,5 @@
 import Image from "next/image"
-import LogoImage from "../assets/logo-navbar.png"
+import LogoImage from "../../assets/logo-navbar.png"
 import style from "./Logo.module.scss"
 
 const Logo = () => (

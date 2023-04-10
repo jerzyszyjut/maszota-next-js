@@ -1,4 +1,4 @@
-import NavigationBar from '@/components/NavigationBar';
+import NavigationBar from '@/components/NavigationBar/NavigationBar';
 import { GetStaticProps } from 'next';
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'

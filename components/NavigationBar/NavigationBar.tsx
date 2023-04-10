@@ -3,10 +3,10 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { useTranslation } from 'next-i18next'
 import { useState } from "react";
-import Logo from "./Logo"
-import HamburgerButton from "./HamburgerButton"
-import FlagPL from "../assets/flags/pl.png"
-import FlagEN from "../assets/flags/en.png"
+import Logo from "../Logo/Logo"
+import HamburgerButton from "../HamburgerButton/HamburgerButton"
+import FlagPL from "../../assets/flags/pl.png"
+import FlagEN from "../../assets/flags/en.png"
 import style from './NavigationBar.module.scss'
 
 const links = [
