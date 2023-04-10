@@ -41,7 +41,7 @@ const NavigationBar = () => {
             <ul className={`flex justify-around items-center flex-col lg:flex-row px-0 lg:px-4 transition-all ${!isOpen ? style.hidden : ''}`}>
                 {links.map(({ href, label }) => (
                     <li key={`${href}${label}`}>
-                        <Link href={href} className="w-auto lg:w-40 mx-2 py-4 text-xl uppercase flex justify-center items-center hover:text-ma-s transition-all lg:border-b-2 lg:border-ma-s">
+                        <Link onClick={() => setIsOpen((previousState) => !previousState)} href={href} className="w-auto lg:w-40 mx-2 py-4 text-xl uppercase flex justify-center items-center hover:text-ma-s transition-all lg:border-b-2 lg:border-ma-s">
                             {t(label)}
                         </Link>
                     </li>
