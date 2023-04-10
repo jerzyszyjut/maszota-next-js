@@ -10,6 +10,7 @@ const HamburgerButton = ({ onClick, isActivated }: Props) => {
         <button
             className='w-8 h-8 flex justify-center items-center lg:hidden'
             type="button"
+            aria-label={!isActivated ? 'Open menu' : 'Close menu'}
             onClick={onClick}
         >
             <span className={`${style.hamburgerIcon} ${isActivated ? style.active : ''}`}></span>
