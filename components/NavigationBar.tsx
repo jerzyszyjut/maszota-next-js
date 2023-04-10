@@ -30,7 +30,7 @@ const NavigationBar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="flex justify-center items-center flex-col lg:flex-row p-4 bg-white">
+        <nav className="w-full flex justify-center items-center flex-col lg:flex-row p-4 bg-white">
             <div className="flex w-full lg:w-auto justify-between items-center">
                 <Logo />
                 <HamburgerButton
