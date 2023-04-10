@@ -8,7 +8,7 @@ interface Props {
 const HamburgerButton = ({ onClick, isActivated }: Props) => {
     return (
         <button
-            className='w-8 h-8 flex justify-center items-center md:hidden'
+            className='w-8 h-8 flex justify-center items-center lg:hidden'
             type="button"
             onClick={onClick}
         >

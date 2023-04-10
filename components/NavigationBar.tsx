@@ -30,18 +30,18 @@ const NavigationBar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="flex justify-center items-center flex-col md:flex-row p-4 bg-white">
-            <div className="flex w-full md:w-auto justify-between items-center">
+        <nav className="flex justify-center items-center flex-col lg:flex-row p-4 bg-white">
+            <div className="flex w-full lg:w-auto justify-between items-center">
                 <Logo />
                 <HamburgerButton
                     onClick={() => setIsOpen(!isOpen)}
                     isActivated={isOpen}
                 />
             </div>
-            <ul className={`flex justify-around items-center flex-col md:flex-row px-0 md:px-4 transition-all ${!isOpen ? style.hidden : ''}`}>
+            <ul className={`flex justify-around items-center flex-col lg:flex-row px-0 lg:px-4 transition-all ${!isOpen ? style.hidden : ''}`}>
                 {links.map(({ href, label }) => (
                     <li key={`${href}${label}`}>
-                        <Link href={href} className="w-auto md:w-40 mx-2 py-4 text-xl uppercase flex justify-center items-center hover:text-ma-s transition-all md:border-b-2 md:border-ma-s">
+                        <Link href={href} className="w-auto lg:w-40 mx-2 py-4 text-xl uppercase flex justify-center items-center hover:text-ma-s transition-all lg:border-b-2 lg:border-ma-s">
                             {t(label)}
                         </Link>
                     </li>
