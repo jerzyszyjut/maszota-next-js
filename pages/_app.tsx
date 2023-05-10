@@ -1,9 +1,12 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import { appWithTranslation } from 'next-i18next'
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Component {...pageProps} />
+  <ParallaxProvider>
+    <Component {...pageProps} />
+  </ParallaxProvider>
 )
 
 export default appWithTranslation(MyApp)

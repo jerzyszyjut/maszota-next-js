@@ -39,12 +39,17 @@ const NavigationBar = () => {
         router.push({ pathname, query }, asPath, { locale: newLocale });
     }
 
+    const redirectToHomePage = () => {
+        const { pathname, asPath, query, locale } = router;
+        router.push({ pathname, query }, asPath, { locale });
+    }
+
     const changeTo = router.locale === 'en' ? 'pl' : 'en';
 
     return (
         <nav className="w-full flex justify-center items-center flex-col lg:flex-row p-4 bg-white">
             <div className="flex w-full lg:w-auto justify-between items-center">
-                <Logo />
+                <Logo onClick={redirectToHomePage} />
                 <HamburgerButton
                     onClick={() => setIsOpen(!isOpen)}
                     isActivated={isOpen}
