@@ -3,27 +3,9 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head';
 import NavigationBar from '@/components/NavigationBar/NavigationBar';
-import { FaRegStar, FaMedal, FaSmile } from 'react-icons/fa';
 import SliderGallery from '@/components/SliderGallery/SliderGallery';
-import CarImage from '@/assets/car.jpg';
-
-const marketingSections = [
-    {
-        icon: FaRegStar,
-        header: 'home-page:qualityHeader',
-        content: 'home-page:qualityContent'
-    },
-    {
-        icon: FaMedal,
-        header: 'home-page:experienceHeader',
-        content: 'home-page:experienceContent'
-    },
-    {
-        icon: FaSmile,
-        header: 'home-page:satisfactionHeader',
-        content: 'home-page:satisfactionContent'
-    }
-]
+import MarketingSection from '@/components/MarketingSection/MarketingSection';
+import Footer from '@/components/Footer/Footer';
 
 const Home = () => {
     const { t } = useTranslation(['common', 'home-page']);
@@ -48,10 +30,9 @@ const Home = () => {
             <main>
                 <NavigationBar />
                 <SliderGallery />
-
-                <section className='bg-gray w-full flex flex-col justify-around py-32 px-56'>
-                </section>
+                <MarketingSection />
             </main>
+            <Footer />
         </>
     )
 }
@@ -60,7 +41,7 @@ export const getStaticProps: GetStaticProps = async ({
     locale,
 }) => ({
     props: {
-        ...(await serverSideTranslations(locale ?? 'en', ['common', 'navigation-bar', 'home-page'])),
+        ...(await serverSideTranslations(locale ?? 'en', ['common', 'navigation-bar', 'home-page', 'footer'])),
     },
 })
 

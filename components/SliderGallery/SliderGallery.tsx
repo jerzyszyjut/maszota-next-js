@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 
 const SliderGallery = () => {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()])
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3000 })])
 
   const photos = [
     {
