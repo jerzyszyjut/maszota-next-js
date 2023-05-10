@@ -1,11 +1,14 @@
-import NavigationBar from '@/components/NavigationBar';
 import { GetStaticProps } from 'next';
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head';
+import NavigationBar from '@/components/NavigationBar/NavigationBar';
+import SliderGallery from '@/components/SliderGallery/SliderGallery';
+import MarketingSection from '@/components/MarketingSection/MarketingSection';
+import Footer from '@/components/Footer/Footer';
 
 const Home = () => {
-    const { t } = useTranslation(['common']);
+    const { t } = useTranslation(['common', 'home-page']);
 
     return (
         <>
@@ -26,7 +29,10 @@ const Home = () => {
             </Head>
             <main>
                 <NavigationBar />
+                <SliderGallery />
+                {/* <MarketingSection /> */}
             </main>
+            <Footer />
         </>
     )
 }
@@ -35,7 +41,7 @@ export const getStaticProps: GetStaticProps = async ({
     locale,
 }) => ({
     props: {
-        ...(await serverSideTranslations(locale ?? 'en', ["common", "navigation-bar"])),
+        ...(await serverSideTranslations(locale ?? 'en', ['common', 'navigation-bar', 'home-page', 'footer'])),
     },
 })
 
