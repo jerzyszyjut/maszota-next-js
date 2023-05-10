@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #000;
+}
+
+a:not([href*="/"]) {
+    border-bottom: #ef249c 2px solid;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        border-bottom: #5b41a0 2px solid;
+    }
+}
