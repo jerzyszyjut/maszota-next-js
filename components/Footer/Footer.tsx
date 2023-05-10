@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className={`${styles.footer} w-full bg-dark-gray flex flex-col md:flex-row text-white items-center md:justify-center md:px-42`}>
       <article>
-        <FaPhone className="text-white" />
+        <FaPhone />
         <div>
           <h2>{t('footer:callUs')}</h2>
           <div>
@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
       </article>
       <article>
-        <FaEnvelope className="text-white" />
+        <FaEnvelope />
         <div>
           <h2>{t('footer:emailUs')}</h2>
           <div>
@@ -38,13 +38,13 @@ const Footer = () => {
           </h2>
           <div className='flex'>
             <a href='https://www.facebook.com/maszota.prof.car.spraying/' target='_blank'>
-              <FaFacebook className="text-white" />
+              <FaFacebook />
             </a>
             <a href='https://www.youtube.com/channel/UCZrEktJWgY2PCwduGOjVZOw' target='_blank'>
-              <FaYoutube className="text-white" />
+              <FaYoutube />
             </a>
             <a href='https://www.instagram.com/maszota_prof_car_spraying/' target='_blank'>
-              <FaInstagram className="text-white" />
+              <FaInstagram />
             </a>
           </div>
         </div>
