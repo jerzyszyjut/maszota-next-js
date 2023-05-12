@@ -5,6 +5,7 @@ import ContactBackgroundImage from '@/assets/contact/contact-background.jpg';
 import Image from 'next/image';
 import styles from '@/styles/contact.module.scss';
 import { useTranslation } from 'next-i18next';
+import ShadedBackgroundImage from '@/components/ShadedBackgroundImage/ShadedBackgroundImage';
 
 const Contact = () => {
   const { t } = useTranslation(['contact']);
@@ -12,14 +13,7 @@ const Contact = () => {
   return (
     <PageWrapper>
       <article className={`${styles.contactArticle} w-full relative`}>
-        <div className={styles.shade}></div>
-        <Image
-          className={styles.backgroundImage}
-          src={ContactBackgroundImage}
-          alt="Contact background image"
-          width={1920}
-          height={1080}
-        />
+        <ShadedBackgroundImage image="lriu6jjr3164wb4xm9pd" />
         <h1 className="text-4xl font-bold text-center uppercase">
           {t('contact:contactUs')}
         </h1>
