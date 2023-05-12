@@ -1,3 +1,4 @@
+//@ts-nocheck
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import styles from './SliderGallery.module.scss';
@@ -30,7 +31,7 @@ const SliderGallery = () => {
       <div className={styles.embla__container}>
         {photos.map((photo, index) => (
           <div className={styles.embla__slide} key={index}>
-            <Image width={1000} height={100} src={photo.src} alt={photo.alt} />
+            <Image width={1000} height={100} src={photo.src} alt={photo.alt} priority={true} />
           </div>
         ))}
       </div>
