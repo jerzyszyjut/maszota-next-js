@@ -12,6 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: npm ci && npm run build
+        env:
+          FIREBASE_CLI_EXPERIMENTS: webframeworks
+          NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: '${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}'
+          CLOUDINARY_API_KEY: '${{ secrets.CLOUDINARY_API_KEY }}'
+          CLOUDINARY_API_SECRET: '${{ secrets.CLOUDINARY_API_SECRET }}'
+          CLOUDINARY_FOLDER:  maszota-next-js
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
@@ -19,14 +25,8 @@ jobs:
           channelId: live
           projectId: maszota-next-js
         env:
-        FIREBASE_CLI_EXPERIMENTS: webframeworks
-        NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: '${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}'
-        CLOUDINARY_API_KEY: '${{ secrets.CLOUDINARY_API_KEY }}'
-        CLOUDINARY_API_SECRET: '${{ secrets.CLOUDINARY_API_SECRET }}'
-        CLOUDINARY_FOLDER:  maszota-next-js
-        
-env:       
-  NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: '${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}'
-  CLOUDINARY_API_KEY: '${{ secrets.CLOUDINARY_API_KEY }}'
-  CLOUDINARY_API_SECRET: '${{ secrets.CLOUDINARY_API_SECRET }}'
-  CLOUDINARY_FOLDER:  maszota-next-js
+          FIREBASE_CLI_EXPERIMENTS: webframeworks
+          NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: '${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}'
+          CLOUDINARY_API_KEY: '${{ secrets.CLOUDINARY_API_KEY }}'
+          CLOUDINARY_API_SECRET: '${{ secrets.CLOUDINARY_API_SECRET }}'
+          CLOUDINARY_FOLDER:  maszota-next-js
