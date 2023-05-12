@@ -4,3 +4,13 @@
         overflow: hidden;
     }
 }
+
+.stripe {
+    height: 0.5rem;
+    width: 100%;
+    background-image: linear-gradient(90deg,#5b41a0,#e33ea7);
+}
+
+.active {
+    border-color: #5b41a0;
+}

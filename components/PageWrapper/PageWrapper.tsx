@@ -2,7 +2,14 @@ import { useTranslation } from 'next-i18next'
 import Head from 'next/head';
 import Footer from '@/components/Footer/Footer';
 import NavigationBar from '@/components/NavigationBar/NavigationBar';
+import { useRouter } from 'next/router';
 
+
+const stripedPages = [
+  '/services',
+  '/about',
+  '/contact',
+];
 
 type PageWrapperProps = {
   children: React.ReactNode;
@@ -10,6 +17,8 @@ type PageWrapperProps = {
 
 const PageWrapper = ({ children }: PageWrapperProps) => {
   const { t } = useTranslation(['common', 'home-page']);
+  const router = useRouter();
+  const isStriped = stripedPages.includes(router.pathname);
 
   return (
     <>
@@ -29,7 +38,7 @@ const PageWrapper = ({ children }: PageWrapperProps) => {
         <meta name="twitter:image" content={t('common:site-image') ?? ''} />
       </Head>
       <main>
-        <NavigationBar />
+        <NavigationBar stripe={isStriped} />
         {children}
       </main>
       <Footer />
