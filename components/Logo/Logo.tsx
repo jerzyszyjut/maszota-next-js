@@ -16,6 +16,7 @@ const Logo = ({ className, onClick }: LogoProps) => (
         className={`${className} ${style.logo}`}
         style={onClick ? { cursor: "pointer" } : {}}
         onClick={onClick}
+        priority={true}
     />
 )
 
