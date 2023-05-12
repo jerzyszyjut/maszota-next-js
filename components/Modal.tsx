@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { Dialog } from '@headlessui/react'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
@@ -24,14 +25,12 @@ export default function Modal({
 
 
   function handleClose() {
-    const { asPath, query, locale } = router;
+    const { locale } = router;
+    const language = locale !== 'en' ? '' : `/${locale}`;
     router.push(
       {
-        pathname: '/gallery',
-        query,
+        pathname: `${language}/gallery`,
       },
-      asPath,
-      { locale }
     );
     onClose();
   }

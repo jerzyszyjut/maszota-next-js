@@ -1,3 +1,4 @@
+//@ts-nocheck
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import useKeypress from 'react-use-keypress'

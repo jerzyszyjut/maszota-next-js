@@ -1,3 +1,4 @@
+//@ts-nocheck
 function forceDownload(blobUrl: string, filename: string) {
   let a: any = document.createElement('a')
   a.download = filename

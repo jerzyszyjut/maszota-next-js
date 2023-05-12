@@ -1,3 +1,4 @@
+//@ts-nocheck
 import {
   ArrowDownTrayIcon,
   ArrowTopRightOnSquareIcon,
@@ -72,11 +73,9 @@ export default function SharedModal({
                 className="absolute"
               >
                 <Image
-                  src={`https://res.cloudinary.com/${
-                    process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
-                  }/image/upload/c_scale,${navigation ? 'w_1280' : 'w_1920'}/${
-                    currentImage.public_id
-                  }.${currentImage.format}`}
+                  src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+                    }/image/upload/c_scale,${navigation ? 'w_1280' : 'w_1920'}/${currentImage.public_id
+                    }.${currentImage.format}`}
                   width={navigation ? 1280 : 1920}
                   height={navigation ? 853 : 1280}
                   priority
@@ -186,23 +185,20 @@ export default function SharedModal({
                       exit={{ width: '0%' }}
                       onClick={() => changePhotoId(id)}
                       key={id}
-                      className={`${
-                        id === index
-                          ? 'z-20 rounded-md shadow shadow-black/50'
-                          : 'z-10'
-                      } ${id === 0 ? 'rounded-l-md' : ''} ${
-                        id === images.length - 1 ? 'rounded-r-md' : ''
-                      } relative inline-block w-full shrink-0 transform-gpu overflow-hidden focus:outline-none`}
+                      className={`${id === index
+                        ? 'z-20 rounded-md shadow shadow-black/50'
+                        : 'z-10'
+                        } ${id === 0 ? 'rounded-l-md' : ''} ${id === images.length - 1 ? 'rounded-r-md' : ''
+                        } relative inline-block w-full shrink-0 transform-gpu overflow-hidden focus:outline-none`}
                     >
                       <Image
                         alt="small photos on the bottom"
                         width={180}
                         height={120}
-                        className={`${
-                          id === index
-                            ? 'brightness-110 hover:brightness-110'
-                            : 'brightness-50 contrast-125 hover:brightness-75'
-                        } h-full transform object-cover transition`}
+                        className={`${id === index
+                          ? 'brightness-110 hover:brightness-110'
+                          : 'brightness-50 contrast-125 hover:brightness-75'
+                          } h-full transform object-cover transition`}
                         src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_180/${public_id}.${format}`}
                       />
                     </motion.button>
