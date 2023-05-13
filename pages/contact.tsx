@@ -1,8 +1,6 @@
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import PageWrapper from '@/components/PageWrapper/PageWrapper';
-import ContactBackgroundImage from '@/assets/contact/contact-background.jpg';
-import Image from 'next/image';
 import styles from '@/styles/contact.module.scss';
 import { useTranslation } from 'next-i18next';
 import ShadedBackgroundImage from '@/components/ShadedBackgroundImage/ShadedBackgroundImage';
