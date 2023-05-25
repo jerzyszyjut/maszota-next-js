@@ -38,7 +38,7 @@ const About = ({ images }: { images: ImageProps[] }) => {
           />
         )}
         <div className="columns-1 gap-4 sm:columns-2 xl:columns-3 2xl:columns-4">
-          {images.map(({ id, public_id, format, blurDataUrl }) => (
+          {images?.map(({ id, public_id, format, blurDataUrl }) => (
             <Link
               key={id}
               href={`${router.pathname}/?photoId=${id}`}
@@ -91,7 +91,7 @@ export const getStaticProps: GetStaticProps = async ({
     i++
   }
 
-  const blurImagePromises = results.resources.map((image: ImageProps) => {
+  const blurImagePromises = results.resources?.map((image: ImageProps) => {
     return getBase64ImageUrl(image)
   })
   const imagesWithBlurDataUrls = await Promise.all(blurImagePromises)

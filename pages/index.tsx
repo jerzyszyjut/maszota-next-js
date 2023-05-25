@@ -36,7 +36,7 @@ export const getStaticProps: GetStaticProps = async ({
         i++
     }
 
-    const blurImagePromises = results.resources.map((image: ImageProps) => {
+    const blurImagePromises = results.resources?.map((image: ImageProps) => {
         return getBase64ImageUrl(image)
     })
     const imagesWithBlurDataUrls = await Promise.all(blurImagePromises)

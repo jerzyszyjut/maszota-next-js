@@ -12,7 +12,7 @@ const SliderGallery = ({ images }: { images: ImageProps[] }) => {
     <div className={styles.embla} ref={emblaRef}>
       <div className={styles.embla__container}>
         {
-          images.map(({ id, public_id, format, blurDataUrl }) => (
+          images?.map(({ id, public_id, format, blurDataUrl }) => (
             <div className={styles.embla__slide} key={id}>
               <Image
                 alt="Car"
