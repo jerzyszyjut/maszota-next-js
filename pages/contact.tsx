@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <PageWrapper>
       <article className={`${styles.contactArticle} w-full relative`}>
-        <ShadedBackgroundImage image="lriu6jjr3164wb4xm9pd" />
+        <ShadedBackgroundImage image="e7adhfjco2gx3npi7pv2" />
         <h1 className="text-4xl font-bold text-center uppercase">
           {t('contact:contactUs')}
         </h1>

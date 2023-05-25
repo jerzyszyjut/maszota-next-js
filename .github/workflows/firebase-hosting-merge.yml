@@ -17,7 +17,8 @@ jobs:
           NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: '${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}'
           CLOUDINARY_API_KEY: '${{ secrets.CLOUDINARY_API_KEY }}'
           CLOUDINARY_API_SECRET: '${{ secrets.CLOUDINARY_API_SECRET }}'
-          CLOUDINARY_FOLDER:  maszota-next-js
+          CLOUDINARY_FOLDER_GALLERY:  maszota-next-js-gallery
+          CLOUDINARY_FOLDER_SLIDER:  maszota-next-js-slider
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
@@ -29,4 +30,5 @@ jobs:
           NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: '${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}'
           CLOUDINARY_API_KEY: '${{ secrets.CLOUDINARY_API_KEY }}'
           CLOUDINARY_API_SECRET: '${{ secrets.CLOUDINARY_API_SECRET }}'
-          CLOUDINARY_FOLDER:  maszota-next-js
+          CLOUDINARY_FOLDER_GALLERY:  maszota-next-js-gallery
+          CLOUDINARY_FOLDER_SLIDER:  maszota-next-js-slider
