@@ -20,7 +20,7 @@ const SliderGallery = ({ images }: { images: ImageProps[] }) => {
                 blurDataURL={blurDataUrl}
                 src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_2000/${public_id}.${format}`}
                 width={2000}
-                height={2000}
+                height={1500}
               />
             </div>
           ))
