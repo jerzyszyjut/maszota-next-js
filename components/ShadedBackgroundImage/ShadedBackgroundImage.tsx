@@ -3,12 +3,18 @@ import { CldImage } from 'next-cloudinary';
 
 type ShadedBackgroundImageProps = {
   image: string;
+  opacity?: number;
 }
 
-const ShadedBackgroundImage = ({ image }: ShadedBackgroundImageProps) => {
+const ShadedBackgroundImage = ({ image, opacity }: ShadedBackgroundImageProps) => {
+  opacity = opacity || 0.8;
   return (
     <>
-      <div className={styles.shade}></div>
+      <div className={styles.shade} style={
+        {
+          backgroundColor: `rgba(255, 255, 255, ${opacity})`
+        }
+      }></div>
       <CldImage
         src={image}
         alt="Background image"
