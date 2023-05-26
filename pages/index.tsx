@@ -5,11 +5,13 @@ import PageWrapper from '@/components/PageWrapper/PageWrapper';
 import { ImageProps } from '@/utils/types';
 import cloudinary from '@/utils/cloudinary';
 import getBase64ImageUrl from '@/utils/generateBlurPlaceholder';
+import Partners from '@/components/Partners/Partners';
 
 const Home = ({ images }: { images: ImageProps[] }) => {
     return (
         <PageWrapper>
             <SliderGallery images={images} />
+            <Partners />
         </PageWrapper>
     )
 }
@@ -47,7 +49,7 @@ export const getStaticProps: GetStaticProps = async ({
 
     return {
         props: {
-            ...(await serverSideTranslations(locale ?? 'en', ['common', 'navigation-bar', 'home-page', 'footer'])),
+            ...(await serverSideTranslations(locale ?? 'en', ['common', 'navigation-bar', 'home-page', 'footer', 'partners'])),
             images: reducedResults,
         }
     }
