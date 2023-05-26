@@ -33,8 +33,8 @@ const Partners = () => {
     <div className={styles.partners}>
       <div className="partners__container flex items-center justify-center flex-col py-16">
         <div className="partners__title flex items-center flex-col">
-          <h2 className="text-7xl uppercase">{t("partners:ourPartners")}</h2>
-          <p className="text-2xl w-1/2 py-8">{t("partners:ourPartnersText")}</p>
+          <h2 className="text-7xl uppercase text-center">{t("partners:ourPartners")}</h2>
+          <p className="text-2xl md:w-1/2 py-8 text-center">{t("partners:ourPartnersText")}</p>
         </div>
         <div className="partners__content">
           <div className="partners__content__item">
@@ -45,7 +45,7 @@ const Partners = () => {
                     {
                       index % 2 === 0 ? (
                         <>
-                          <h3 className="w-2/3 md:w-1/3 p-8 order-1 md:order-none" key={index}>{t(partner.text)}</h3>
+                          <h3 className="md:w-1/3 p-8 order-1 md:order-none" key={index}>{t(partner.text)}</h3>
                           <CldImage
                             key={partner.id}
                             src={partner.id}
@@ -63,7 +63,7 @@ const Partners = () => {
                             height={300}
                             alt={partner.name}
                           />
-                          <h3 className="w-2/3 md:w-1/3 p-8 md:order-1" key={index}>{t(partner.text)}</h3>
+                          <h3 className="md:w-1/3 p-8 md:order-1" key={index}>{t(partner.text)}</h3>
                         </>
                       )
                     }

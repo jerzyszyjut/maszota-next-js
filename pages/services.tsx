@@ -34,10 +34,10 @@ const Services = () => {
     <PageWrapper>
       {
         services.map(({ id, name, paragraph }) => (
-          <div className='relative flex justify-center items-center flex-col py-12' key={id}>
+          <div className='relative flex justify-center items-center flex-col py-12 px-4' key={id}>
             <ShadedBackgroundImage image={id} opacity={0.6} />
-            <h1 className="text-4xl uppercase font-bold py-8">{t(name)}</h1>
-            <div className='flex flex-col items-center justify-center w-7/12 py-8'>
+            <h1 className="text-4xl uppercase font-bold py-8 text-center">{t(name)}</h1>
+            <div className='flex flex-col items-center justify-center md:w-7/12 py-8 text-center'>
               {
                 [1, 2, 3].map((page) => (
                   <p key={page} className="text-xl py-4">{t(paragraph(page))}</p>
