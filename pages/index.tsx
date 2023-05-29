@@ -27,7 +27,6 @@ const Home = ({ images }: { images: ImageProps[] }) => {
                     }
                 </div>
             </div>
-            <Partners />
         </PageWrapper>
     )
 }

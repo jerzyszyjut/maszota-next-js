@@ -19,6 +19,10 @@ const links = [
         label: 'navigation-bar:services',
     },
     {
+        href: '/partners',
+        label: 'navigation-bar:partners',
+    },
+    {
         href: '/gallery',
         label: 'navigation-bar:gallery',
     },

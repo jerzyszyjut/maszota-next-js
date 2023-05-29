@@ -19,9 +19,9 @@ const partners = [
     text: "partners:kochchemie"
   },
   {
-    id: "gakra_fuxgw2",
-    name: "Gakra",
-    text: "partners:gakra"
+    id: "duxone-logo-4C89910D14-seeklogo.com_uutkqm.png",
+    name: "Duxone",
+    text: "partners:duxone"
   },
 ]
 
