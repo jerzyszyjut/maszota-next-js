@@ -6,11 +6,6 @@ import { useTranslation } from 'next-i18next'
 
 const services = [
   {
-    id: "IMG_7876_rqsy90",
-    name: "services:personalization",
-    paragraph: ((page: number) => `services:personalization-parapraph-${page}`),
-  },
-  {
     id: "311326145_441131041435879_2020367255377143095_n_zir3fd",
     name: "services:painting",
     paragraph: ((page: number) => `services:painting-parapraph-${page}`),

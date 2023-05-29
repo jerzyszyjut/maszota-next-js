@@ -4,9 +4,11 @@ import { CldImage } from 'next-cloudinary';
 type ShadedBackgroundImageProps = {
   image: string;
   opacity?: number;
+  height?: number;
+  width?: number;
 }
 
-const ShadedBackgroundImage = ({ image, opacity }: ShadedBackgroundImageProps) => {
+const ShadedBackgroundImage = ({ image, opacity, height, width }: ShadedBackgroundImageProps) => {
   opacity = opacity || 0.8;
   return (
     <>
@@ -18,8 +20,8 @@ const ShadedBackgroundImage = ({ image, opacity }: ShadedBackgroundImageProps) =
       <CldImage
         src={image}
         alt="Background image"
-        width="1920"
-        height="1080"
+        width={width ?? 1920}
+        height={height ?? 1080}
         className={styles.backgroundImage}
       />
     </>
