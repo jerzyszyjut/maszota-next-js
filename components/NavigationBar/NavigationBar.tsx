@@ -70,7 +70,7 @@ const NavigationBar = ({ stripe }: NavigationBarProps) => {
                                 <Link
                                     onClick={() => setIsOpen((previousState) => !previousState)}
                                     href={href}
-                                    className={`${router.pathname === href ? styles.active : ''} w-auto lg:w-40 mx-2 py-4 text-xl uppercase flex justify-center items-center hover:text-ma-s transition-all lg:border-b-2 lg:border-ma-s`}>
+                                    className={`${router.pathname === href ? styles.active : ''} w-auto lg:w-44 mx-2 py-4 text-xl uppercase flex justify-center items-center hover:text-ma-s transition-all lg:border-b-2 lg:border-ma-s`}>
                                     {t(label)}
                                 </Link>
                             </li>
