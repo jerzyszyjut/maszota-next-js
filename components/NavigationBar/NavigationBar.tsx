@@ -7,6 +7,7 @@ import Logo from "../Logo/Logo"
 import HamburgerButton from "../HamburgerButton/HamburgerButton"
 import FlagPL from "../../assets/flags/pl.png"
 import FlagEN from "../../assets/flags/en.png"
+import FlagDE from "../../assets/flags/de.png"
 import styles from './NavigationBar.module.scss'
 
 const links = [
@@ -51,8 +52,6 @@ const NavigationBar = ({ stripe }: NavigationBarProps) => {
         router.push({ pathname, query }, asPath, { locale });
     }
 
-    const changeTo = router.locale === 'en' ? 'pl' : 'en';
-
     return (
         <>
             <nav className="w-full flex justify-center items-center flex-col lg:flex-row p-4 bg-white">
@@ -76,25 +75,30 @@ const NavigationBar = ({ stripe }: NavigationBarProps) => {
                             </li>
                         ))}
                     </ul>
-                    {changeTo === 'pl' ?
-                        <Image
-                            src={FlagPL}
-                            alt="Polish flag"
-                            width={30}
-                            height={30}
-                            onClick={() => changeLanguage(changeTo)}
-                            className="cursor-pointer"
-                        />
-                        :
-                        <Image
-                            src={FlagEN}
-                            alt="English flag"
-                            width={30}
-                            height={30}
-                            onClick={() => changeLanguage(changeTo)}
-                            className="cursor-pointer"
-                        />
-                    }
+                    <Image
+                        src={FlagPL}
+                        alt="Polish flag"
+                        width={30}
+                        height={30}
+                        onClick={() => changeLanguage('pl')}
+                        className="cursor-pointer m-4 lg:mb-0"
+                    />
+                    <Image
+                        src={FlagEN}
+                        alt="English flag"
+                        width={30}
+                        height={30}
+                        onClick={() => changeLanguage('en')}
+                        className="cursor-pointer m-4 lg:mb-0"
+                    />
+                    <Image
+                        src={FlagDE}
+                        alt="German flag"
+                        width={30}
+                        height={30}
+                        onClick={() => changeLanguage('de')}
+                        className="cursor-pointer m-4 lg:mb-0"
+                    />
                 </div>
             </nav>
             {

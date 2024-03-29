@@ -2,6 +2,7 @@
 import imagemin from 'imagemin'
 import imageminJpegtran from 'imagemin-jpegtran'
 import type { ImageProps } from './types'
+import { Buffer } from 'buffer';
 
 const cache = new Map<ImageProps, string>()
 
