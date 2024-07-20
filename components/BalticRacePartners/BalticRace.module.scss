@@ -2,6 +2,7 @@
   background-color: #250649;
   position: relative;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .background_polygon_1 {
@@ -9,7 +10,7 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(45deg, #6e2888, #250751);
-  clip-path: polygon(-10% -10%, 50% -10%, 40% 50%, -10% 50%);
+  clip-path: polygon(-10% -10%, 60% -10%, 50% 50%, -10% 50%);
   animation: slideInFromLeft 1s ease;
 }
 
