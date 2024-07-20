@@ -8,12 +8,14 @@ import getBase64ImageUrl from "@/utils/generateBlurPlaceholder";
 import Partners from "@/components/Partners/Partners";
 import { useTranslation } from "next-i18next";
 import ShadedBackgroundImage from "@/components/ShadedBackgroundImage/ShadedBackgroundImage";
+import BalticRace from "@/components/BalticRacePartners/BalticRace";
 
 const Home = ({ images }: { images: ImageProps[] }) => {
   const { t } = useTranslation(["services"]);
 
   return (
     <PageWrapper>
+      <BalticRace />
       <SliderGallery images={images} />
       <div className="relative flex justify-center items-center flex-col py-40 px-4">
         <ShadedBackgroundImage

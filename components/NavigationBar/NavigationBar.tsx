@@ -79,37 +79,45 @@ const NavigationBar = ({ stripe }: NavigationBarProps) => {
                   href={href}
                   className={`${
                     router.pathname === href ? styles.active : ""
-                  } w-auto lg:w-44 mx-2 py-4 text-xl uppercase flex justify-center items-center hover:text-ma-s transition-all lg:border-b-2 lg:border-ma-s`}
+                  } w-auto lg:w-44 mx-1 py-4 text-xl uppercase flex justify-center items-center hover:text-ma-s transition-all lg:border-b-2 lg:border-ma-s`}
                 >
                   {t(label)}
                 </Link>
               </li>
             ))}
           </ul>
-          <Image
-            src={FlagPL}
-            alt="Polish flag"
-            width={30}
-            height={30}
-            onClick={() => changeLanguage("pl")}
-            className="cursor-pointer m-4 lg:mb-0"
-          />
-          <Image
-            src={FlagEN}
-            alt="English flag"
-            width={30}
-            height={30}
-            onClick={() => changeLanguage("en")}
-            className="cursor-pointer m-4 lg:mb-0"
-          />
-          <Image
-            src={FlagDE}
-            alt="German flag"
-            width={30}
-            height={30}
-            onClick={() => changeLanguage("de")}
-            className="cursor-pointer m-4 lg:mb-0"
-          />
+          <div className="flex justify-center items-center flex-col">
+            {router.locale != "pl" && (
+              <Image
+                src={FlagPL}
+                alt="Polish flag"
+                width={30}
+                height={30}
+                onClick={() => changeLanguage("pl")}
+                className="cursor-pointer m-1 lg:mb-0 w-7 h-7"
+              />
+            )}
+            {router.locale != "en" && (
+              <Image
+                src={FlagEN}
+                alt="English flag"
+                width={30}
+                height={30}
+                onClick={() => changeLanguage("en")}
+                className="cursor-pointer m-1 lg:mb-0 w-7 h-7"
+              />
+            )}
+            {router.locale != "de" && (
+              <Image
+                src={FlagDE}
+                alt="German flag"
+                width={30}
+                height={30}
+                onClick={() => changeLanguage("de")}
+                className="cursor-pointer m-1 lg:mb-0 w-7 h-7"
+              />
+            )}
+          </div>
         </div>
       </nav>
       {stripe && <div className={styles.stripe}></div>}

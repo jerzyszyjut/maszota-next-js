@@ -1,23 +1,23 @@
-import Image from "next/image"
-import LogoImage from "../../assets/logo-navbar.png"
-import style from "./Logo.module.scss"
+import Image from "next/image";
+import LogoImage from "../../assets/logo-navbar.png";
+import style from "./Logo.module.scss";
 
 type LogoProps = {
-    className?: string
-    onClick?: () => void
-}
+  className?: string;
+  onClick?: () => void;
+};
 
 const Logo = ({ className, onClick }: LogoProps) => (
-    <Image
-        src={LogoImage}
-        alt="Logo"
-        width={360}
-        height={80}
-        className={`${className} ${style.logo}`}
-        style={onClick ? { cursor: "pointer" } : {}}
-        onClick={onClick}
-        priority={true}
-    />
-)
+  <Image
+    src={LogoImage}
+    alt="Logo"
+    width={260}
+    height={80}
+    className={`${className} ${style.logo}`}
+    style={onClick ? { cursor: "pointer" } : {}}
+    onClick={onClick}
+    priority={true}
+  />
+);
 
-export default Logo
+export default Logo;
