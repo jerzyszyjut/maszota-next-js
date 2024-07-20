@@ -9,7 +9,8 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(45deg, #6e2888, #250751);
-  clip-path: polygon(0% 0%, 50% 0%, 40% 50%, 0% 50%);
+  clip-path: polygon(-10% -10%, 50% -10%, 40% 50%, -10% 50%);
+  animation: slideInFromLeft 1s ease;
 }
 
 .background_polygon_2 {
@@ -17,5 +18,25 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(45deg, #3c0548, #b20360);
-  clip-path: polygon(100% 100%, 60% 100%, 70% 40%, 100% 40%);
+  clip-path: polygon(110% 110%, 60% 110%, 70% 40%, 110% 40%);
+  animation: slideInFromRight 1s ease;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
