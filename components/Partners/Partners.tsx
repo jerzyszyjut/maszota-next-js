@@ -4,19 +4,9 @@ import { useTranslation } from "next-i18next";
 
 const partners = [
   {
-    id: "logo-debeer-refinish_nqd0jf",
-    name: "DeBeeer",
-    text: "partners:debeer",
-  },
-  {
-    id: "ValsparAutomotiveLogoHor_nefcna",
-    name: "Valspar Automotive",
-    text: "partners:valspar",
-  },
-  {
-    id: "koch-chemie_qupv3q",
-    name: "Koch-Chemie",
-    text: "partners:kochchemie",
+    id: "indasa",
+    name: "Indasa",
+    text: "partners:indasa",
   },
   {
     id: "duxone-logo-4C89910D14-seeklogo.com_uutkqm.png",
@@ -24,19 +14,29 @@ const partners = [
     text: "partners:duxone",
   },
   {
-    id: "ukleja",
-    name: "Ukleja",
-    text: "partners:ukleja",
-  },
-  {
     id: "kovax",
     name: "Kovax",
     text: "partners:kovax",
   },
   {
-    id: "indasa",
-    name: "Indasa",
-    text: "partners:indasa",
+    id: "ValsparAutomotiveLogoHor_nefcna",
+    name: "Valspar Automotive",
+    text: "partners:valspar",
+  },
+  {
+    id: "ukleja",
+    name: "Ukleja",
+    text: "partners:ukleja",
+  },
+  {
+    id: "logo-debeer-refinish_nqd0jf",
+    name: "DeBeeer",
+    text: "partners:debeer",
+  },
+  {
+    id: "koch-chemie_qupv3q",
+    name: "Koch-Chemie",
+    text: "partners:kochchemie",
   },
 ];
 
