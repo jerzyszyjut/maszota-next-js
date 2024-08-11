@@ -24,12 +24,37 @@ const links = [
     label: "navigation-bar:services",
   },
   {
+    href: "/socials",
+    label: "navigation-bar:social",
+  },
+  {
     href: "/gallery",
     label: "navigation-bar:gallery",
   },
   {
     href: "/contact",
     label: "navigation-bar:contact",
+  },
+];
+
+const flags = [
+  {
+    id: "pl",
+    locale: "pl",
+    src: FlagPL,
+    alt: "Polish flag",
+  },
+  {
+    id: "en",
+    locale: "en",
+    src: FlagEN,
+    alt: "English flag",
+  },
+  {
+    id: "de",
+    locale: "de",
+    src: FlagDE,
+    alt: "German flag",
   },
 ];
 
@@ -54,8 +79,8 @@ const NavigationBar = ({ stripe }: NavigationBarProps) => {
 
   return (
     <>
-      <nav className="w-full flex justify-center items-center flex-col lg:flex-row p-4 bg-white">
-        <div className="flex w-full lg:w-auto justify-between items-center">
+      <nav className="w-full flex justify-center items-center flex-col xl:flex-row p-4 bg-white">
+        <div className="flex w-full xl:w-auto justify-between items-center">
           <Logo onClick={redirectToHomePage} />
           <HamburgerButton
             onClick={() => setIsOpen(!isOpen)}
@@ -63,12 +88,12 @@ const NavigationBar = ({ stripe }: NavigationBarProps) => {
           />
         </div>
         <div
-          className={`flex justify-around items-center flex-col lg:flex-row px-0 lg:px-4 transition-all ${
+          className={`flex justify-around items-center flex-col xl:flex-row px-0 xl:px-4 transition-all ${
             !isOpen ? styles.hidden : ""
           }`}
         >
           <ul
-            className={`flex justify-around items-center flex-col lg:flex-row px-0 lg:px-4 transition-all ${
+            className={`flex justify-around items-center flex-col xl:flex-row px-0 xl:px-4 transition-all ${
               !isOpen ? styles.hidden : ""
             }`}
           >
@@ -79,44 +104,27 @@ const NavigationBar = ({ stripe }: NavigationBarProps) => {
                   href={href}
                   className={`${
                     router.pathname === href ? styles.active : ""
-                  } w-auto lg:w-44 mx-1 py-4 text-xl uppercase flex justify-center items-center hover:text-ma-s transition-all lg:border-b-2 lg:border-ma-s`}
+                  } w-auto xl:w-44 mx-1 py-4 text-xl uppercase flex justify-center items-center hover:text-ma-s transition-all xl:border-b-2 xl:border-ma-s`}
                 >
                   {t(label)}
                 </Link>
               </li>
             ))}
           </ul>
-          <div className="flex justify-center items-center flex-col">
-            {router.locale != "pl" && (
-              <Image
-                src={FlagPL}
-                alt="Polish flag"
-                width={30}
-                height={30}
-                onClick={() => changeLanguage("pl")}
-                className="cursor-pointer m-1 lg:mb-0 w-7 h-7"
-              />
-            )}
-            {router.locale != "en" && (
-              <Image
-                src={FlagEN}
-                alt="English flag"
-                width={30}
-                height={30}
-                onClick={() => changeLanguage("en")}
-                className="cursor-pointer m-1 lg:mb-0 w-7 h-7"
-              />
-            )}
-            {router.locale != "de" && (
-              <Image
-                src={FlagDE}
-                alt="German flag"
-                width={30}
-                height={30}
-                onClick={() => changeLanguage("de")}
-                className="cursor-pointer m-1 lg:mb-0 w-7 h-7"
-              />
-            )}
+          <div className="flex justify-center items-center flex-col w-7 h-7">
+            {flags
+              .filter((flag) => flag.locale !== router.locale)
+              .map((flag) => (
+                <Image
+                  key={flag.id}
+                  src={flag.src}
+                  alt={flag.alt}
+                  width={30}
+                  height={30}
+                  onClick={() => changeLanguage(flag.locale)}
+                  className="cursor-pointer m-1 xl:mb-0 w-7 h-7"
+                />
+              ))}
           </div>
         </div>
       </nav>

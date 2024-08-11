@@ -1,23 +1,23 @@
-import '@/styles/globals.scss'
-import type { AppProps } from 'next/app'
-import { appWithTranslation } from 'next-i18next'
-import Script from 'next/script';
-import Head from 'next/head';
-import * as gtag from '../utils/gtag'
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import "@/styles/globals.scss";
+import type { AppProps } from "next/app";
+import { appWithTranslation } from "next-i18next";
+import Script from "next/script";
+import Head from "next/head";
+import * as gtag from "../utils/gtag";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  const router = useRouter()
+  const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url: any) => {
-      gtag.pageview(url)
-    }
-    router.events.on('routeChangeComplete', handleRouteChange)
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <>
@@ -35,6 +35,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
             `,
           }}
         />
+        <script async src="//www.instagram.com/embed.js"></script>
       </Head>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
@@ -43,7 +44,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       />
       <Component {...pageProps} />
     </>
-  )
-}
+  );
+};
 
-export default appWithTranslation(MyApp)
+export default appWithTranslation(MyApp);
