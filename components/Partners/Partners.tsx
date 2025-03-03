@@ -4,14 +4,24 @@ import { useTranslation } from "next-i18next";
 
 const partners = [
   {
+    id: "axalta",
+    name: "Axalta",
+    text: "partners:axalta",
+  },
+  {
+    id: "cromax",
+    name: "Cromax",
+    text: "partners:cromax",
+  },
+  {
     id: "indasa",
     name: "Indasa",
     text: "partners:indasa",
   },
   {
-    id: "duxone-logo-4C89910D14-seeklogo.com_uutkqm.png",
-    name: "Duxone",
-    text: "partners:duxone",
+    id: "csv",
+    name: "CSV",
+    text: "partners:csv",
   },
   {
     id: "kovax",
@@ -19,24 +29,19 @@ const partners = [
     text: "partners:kovax",
   },
   {
-    id: "ValsparAutomotiveLogoHor_nefcna",
-    name: "Valspar Automotive",
-    text: "partners:valspar",
-  },
-  {
-    id: "ukleja",
-    name: "Ukleja",
-    text: "partners:ukleja",
-  },
-  {
     id: "logo-debeer-refinish_nqd0jf",
     name: "DeBeeer",
     text: "partners:debeer",
   },
   {
-    id: "koch-chemie_qupv3q",
-    name: "Koch-Chemie",
-    text: "partners:kochchemie",
+    id: "duxone-logo-4C89910D14-seeklogo.com_uutkqm.png",
+    name: "Duxone",
+    text: "partners:duxone",
+  },
+  {
+    id: "ukleja",
+    name: "Ukleja",
+    text: "partners:ukleja",
   },
 ];
 
