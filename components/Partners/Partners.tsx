@@ -30,6 +30,11 @@ const partners = [
     text: "partners:kovax",
   },
   {
+    id: "ngenco",
+    name: "Ngenco",
+    text: "partners:ngenco",
+  },
+  {
     id: "logo-debeer-refinish_nqd0jf",
     name: "DeBeeer",
     text: "partners:debeer",
