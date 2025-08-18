@@ -44,11 +44,6 @@ const partners = [
     name: "Duxone",
     text: "partners:duxone",
   },
-  {
-    id: "ukleja",
-    name: "Ukleja",
-    text: "partners:ukleja",
-  },
 ];
 
 const Partners = () => {
