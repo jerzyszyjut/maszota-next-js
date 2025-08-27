@@ -17,10 +17,10 @@ const BalticRace = () => {
           {t("baltic-race")}
         </h1>
         <CldImage
-          key={"logo_baltic_race"}
+          key={"logo_two_udssc5"}
           width={400}
           height={200}
-          src={"logo_baltic_race"}
+          src={"logo_two_udssc5"}
           alt={"Baltic race logo"}
         />
       </div>
