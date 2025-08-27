@@ -1,0 +1,38 @@
+.aboutUs {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+}
+
+.sectionHeader {
+  padding: 4rem 2rem 2rem;
+  text-align: center;
+}
+
+.mainTitle {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #333, #666);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section {
+  margin: 3rem 0;
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 2.5rem;
+  }
+  
+  .sectionHeader {
+    padding: 2rem 1rem 1rem;
+  }
+  
+  .section {
+    margin: 2rem 0;
+  }
+}

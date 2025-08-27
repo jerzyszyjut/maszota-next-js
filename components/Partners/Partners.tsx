@@ -1,7 +1,6 @@
 import { CldImage } from "next-cloudinary";
 import styles from "./Partners.module.scss";
 import { useTranslation } from "next-i18next";
-import { Trans } from "react-i18next";
 
 const partners = [
   {
@@ -78,9 +77,8 @@ const Partners = () => {
                       <h3
                         className="md:w-1/3 p-8 order-1 md:order-none"
                         key={index}
-                      >
-                        <Trans i18nKey={partner.text} />
-                      </h3>
+                        dangerouslySetInnerHTML={{ __html: t(partner.text) }}
+                      />
                       <CldImage
                         key={partner.id}
                         src={partner.id}
@@ -98,9 +96,11 @@ const Partners = () => {
                         height={300}
                         alt={partner.name}
                       />
-                      <h3 className="md:w-1/3 p-8 md:order-1" key={index}>
-                        <Trans i18nKey={partner.text} />
-                      </h3>
+                      <h3
+                        className="md:w-1/3 p-8 md:order-1"
+                        key={index}
+                        dangerouslySetInnerHTML={{ __html: t(partner.text) }}
+                      />
                     </>
                   )}
                 </div>

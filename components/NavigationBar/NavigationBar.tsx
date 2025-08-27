@@ -24,6 +24,10 @@ const links = [
     label: "navigation-bar:services",
   },
   {
+    href: "/#about-us",
+    label: "navigation-bar:about-us",
+  },
+  {
     href: "/socials",
     label: "navigation-bar:social",
   },
