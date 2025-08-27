@@ -28,10 +28,6 @@ const links = [
     label: "navigation-bar:about-us",
   },
   {
-    href: "/socials",
-    label: "navigation-bar:social",
-  },
-  {
     href: "/gallery",
     label: "navigation-bar:gallery",
   },

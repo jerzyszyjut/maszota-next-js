@@ -12,11 +12,16 @@
   min-width: 0;
   position: relative;
   bottom: 0;
+  height: 80vh; // Set fixed height for the slide container
+  
+  @media (max-width: 768px) {
+    height: 60vh; // Smaller height for mobile
+  }
 
   img {
     width: 100%;
-    height: auto;
-    max-height: 80vh;
-    object-fit: cover;
+    height: 100%; // Fill the entire container height
+    object-fit: cover; // Crop image to fit while maintaining aspect ratio
+    object-position: center; // Center the cropped image
   }
 }

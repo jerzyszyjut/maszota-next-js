@@ -18,11 +18,11 @@ const AboutUs = ({ videos, certificates }: AboutUsProps) => {
         <h1 className={styles.mainTitle}>{t("about-us:about-us")}</h1>
       </div>
 
-      <div className={styles.section}>
+      <div>
         <Certificates certificates={certificates} />
       </div>
 
-      <div className={styles.section}>
+      <div>
         <Socials videos={videos} />
       </div>
     </div>
