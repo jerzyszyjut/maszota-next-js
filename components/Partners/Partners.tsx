@@ -44,6 +44,11 @@ const partners = [
     name: "Duxone",
     text: "partners:duxone",
   },
+  {
+    id: "EVERCOAT-logo_200x600px_x53owk",
+    name: "EVERCOAT",
+    text: "partners:evercoat",
+  },
 ];
 
 const Partners = () => {
