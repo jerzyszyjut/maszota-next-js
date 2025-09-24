@@ -14,7 +14,17 @@ const collaborations = [
   {
     id: "poczciwy_krzychu1",
     type: CollaborationType.YOUTUBE,
-    link: "https://www.youtube.com/embed/NfImLQPO9uE?si=qEtR1_EtQ0BuOfH7",
+    link: "https://www.youtube.com/embed/NfImLQPO9uE",
+  },
+  {
+    id: "poczciwy_krzychu2",
+    type: CollaborationType.YOUTUBE,
+    link: "https://www.youtube.com/embed/dYIxDHRwPmg",
+  },
+  {
+    id: "poczciwy_krzychu3",
+    type: CollaborationType.YOUTUBE,
+    link: "https://www.youtube.com/embed/OWBYXFILgrI",
   },
   {
     id: "edzioo1",
